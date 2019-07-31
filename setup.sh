@@ -25,5 +25,5 @@ echo "sudo ./simplebeacon.js --hwid=$hardwareId" >> startup.sh
 chmod 755 /home/pi/startup/startup.sh
 set -H
 cd /etc
-sudo sed -i 's+exit 0+/home/pi/startup/startup.sh\nexit 0+' rc.local
+sudo sed -i 's+fi+fi\n/home/pi/startup/startup.sh+' rc.local
 sudo reboot
